@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="doc-review">
+  <head>
+    <title>MEAN Document Review - Upload</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h1>MEAN Document Review - Upload</h1>
+    <%#success%>
+    	Your upload was a success!<br>
+    <%/success%>
+
+    <form method='post' action='upload' enctype="multipart/form-data">
+        <input type='file' name='fileUploaded'>
+        <input type='submit'>
+    </form>
+  </body>
+</html>

@@ -6,14 +6,16 @@
 	</head>
 	<body>
 		<form method="POST" action="/login">
-			{{#failure}}
-			Your credentials did not prove authentic.<br>
-			{{/failure}}
-			<table>
-				<tr><td>Username: </td><td><input type="text" id="username" name="username" placeholder="username"></td></tr>
-				<tr><td>Username: </td><td><input type="password" id="password" name="password" placeholder="password"></td></tr>
-				<tr><td colspan=2><input type="submit"></td></tr>
-			</table>
+			<div id="login-panel">
+				<%#failure%>
+				Your credentials did not prove authentic.<br>
+				<%/failure%>
+				<table>
+					<tr><td>Username: </td><td><input type="text" id="username" name="username" placeholder="username" value="mtaylor22"></td></tr>
+					<tr><td>Username: </td><td><input type="password" id="password" name="password" placeholder="password" value="password"></td></tr>
+					<tr><td colspan=2><input type="submit"></td></tr>
+				</table>
+			</div>
 		</form>
 	</body>
 </html>

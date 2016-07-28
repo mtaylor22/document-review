@@ -1,11 +1,22 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="doc-review">
   <head>
     <title>MEAN Document Review</title>
     <link rel='stylesheet' href='/stylesheets/style.css' />
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
   </head>
   <body>
     <h1>MEAN Document Review</h1>
-    Hi
+    <div id="document-controller" ng-controller="doc-controller" ng-init="refreshData()">
+      <table>
+        <tr ng-repeat="doc in docs">
+          <td>{{doc.name}}</td><td>{{doc.size}}</td>
+        </tr>
+      </table>
+      {{docs}}
+    </div>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="/javascripts/main.js"></script>
+
   </body>
 </html>
