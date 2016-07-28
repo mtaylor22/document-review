@@ -59,6 +59,12 @@ app.get('/docs', function(req,res){
   });
 });
 
+app.get('/docs/:doc', function(req,res){
+  console.log(req.params.doc);
+  res.sendfile('docs/'+req.params.doc);
+});
+
+
 app.post('/upload', function(req, res){
   var fstream;
   req.pipe(req.busboy);

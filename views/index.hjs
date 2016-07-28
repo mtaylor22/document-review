@@ -9,8 +9,9 @@
     <h1>MEAN Document Review</h1>
     <div id="document-controller" ng-controller="doc-controller" ng-init="refreshData()">
       <table>
+        <tr><td>Name</td><td>Size</td></tr>
         <tr ng-repeat="doc in docs">
-          <td>{{doc.name}}</td><td>{{doc.size}}</td>
+          <td><a href="/pdfjs/web/viewer.html?file=/docs/{{doc.filename}}">{{doc.name}}</td><td>{{doc.size}}</td>
         </tr>
       </table>
       {{docs}}
